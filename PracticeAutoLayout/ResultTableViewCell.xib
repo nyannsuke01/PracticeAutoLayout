@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" id="KGk-i7-Jjw" customClass="ResultTableViewCell" customModule="PracticeTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLs-HU-UW0">
+                        <rect key="frame" x="77" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-vY-h7O">
+                        <rect key="frame" x="16" y="12" width="27" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bi-Lm-Fbe">
+                        <rect key="frame" x="279" y="11" width="19" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <state key="normal" image="batsu"/>
+                        <connections>
+                            <action selector="deleteCell:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Vv-FI-meI"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="PGM-vY-h7O" secondAttribute="bottom" constant="11" id="1yr-yX-VIx"/>
+                    <constraint firstItem="dLs-HU-UW0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="7fB-WO-FIS"/>
+                    <constraint firstItem="dLs-HU-UW0" firstAttribute="leading" secondItem="PGM-vY-h7O" secondAttribute="trailing" constant="34" id="C1z-gS-89K"/>
+                    <constraint firstItem="PGM-vY-h7O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FoP-Tl-HTz"/>
+                    <constraint firstAttribute="bottom" secondItem="dLs-HU-UW0" secondAttribute="bottom" constant="12" id="pnX-od-a5g"/>
+                    <constraint firstItem="PGM-vY-h7O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="sdy-ik-WaI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellLabel" destination="dLs-HU-UW0" id="o91-Sz-uBV"/>
+                <outlet property="cellNo" destination="PGM-vY-h7O" id="6Fa-sz-Mma"/>
+                <outlet property="deleteButton" destination="3bi-Lm-Fbe" id="Vbc-PV-62R"/>
+                <outlet property="textLabel" destination="dLs-HU-UW0" id="Del-fu-4Jx"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="batsu" width="128" height="128"/>
+    </resources>
+</document>
