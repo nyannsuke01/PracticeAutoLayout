@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, deleteProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tbl: UITableView!
+
 
     // セルに表示するタイトルのリスト
     var titleList = ["おひつじ座", "おうし座", "ふたご座", "かに座", "しし座",
@@ -45,14 +47,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // タップ時の処理を記述
 
     }
+    func catchData(count: Int) {
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @objc override func delete(_ sender: Any?) {
+        
+    }
 
 
 
 }
+
 

@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol  deleteProtocol　{
+    func catchData(count: int)
+}
+
 class ResultTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cellNo: UILabel!
     let vc = ViewController()
+    var delegate:deleteProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,15 +30,24 @@ class ResultTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func catchData {
+        
     
     @IBAction func deleteCell(_ sender: Any) {
+        delegate!.catchData(count:count)
+        
+    }
 
-        cellLabel.backgroundColor = .red
-        //このセルの情報とセル自体を削除するというのを記述すれば良い?
-        print(vc.titleList)
-        vc.titleList.removeAll()
-        //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-        print(vc.titleList)
+
+
+//        cellLabel.backgroundColor = .red
+//        //このセルの情報とセル自体を削除するというのを記述すれば良い?
+//        print(vc.titleList)
+//        vc.titleList.removeAll()
+//        //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+//        print(vc.titleList)
+
+        
 
 
     }
